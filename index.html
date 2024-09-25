@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional Custom Styles -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 p-5 text-white text-center">
+        <h1 class="text-3xl font-bold">John Doe</h1>
+        <p class="text-lg">Software Engineer | Java Developer</p>
+    </header>
+
+    <main class="container mx-auto mt-10">
+        <section id="about" class="mb-10 p-5 bg-white shadow-md rounded">
+            <h2 class="text-2xl font-semibold mb-2">About Me</h2>
+            <p>I am a passionate software engineer with a year of experience in Java development. I enjoy building efficient and scalable applications.</p>
+        </section>
+
+        <section id="projects" class="mb-10 p-5 bg-white shadow-md rounded">
+            <h2 class="text-2xl font-semibold mb-2">Projects</h2>
+            <ul class="list-disc pl-5">
+                <li class="mb-2">
+                    <strong>Project One</strong>: A Java-based application for managing tasks.
+                </li>
+                <li class="mb-2">
+                    <strong>Project Two</strong>: A web application that connects users with local events.
+                </li>
+                <li class="mb-2">
+                    <strong>Project Three</strong>: A RESTful API built with Spring Boot.
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="mb-10 p-5 bg-white shadow-md rounded">
+            <h2 class="text-2xl font-semibold mb-2">Contact Me</h2>
+            <form id="contactForm" class="flex flex-col">
+                <input type="text" placeholder="Your Name" class="mb-2 p-2 border rounded" required>
+                <input type="email" placeholder="Your Email" class="mb-2 p-2 border rounded" required>
+                <textarea placeholder="Your Message" class="mb-2 p-2 border rounded" required></textarea>
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded">Send Message</button>
+            </form>
+            <p id="formResponse" class="mt-2 text-green-600 hidden"></p>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 p-5 text-white text-center">
+        <p>&copy; 2024 John Doe</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('formResponse').textContent = 'Thank you for your message!';
+            document.getElementById('formResponse').classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
